@@ -1,0 +1,43 @@
+type User{
+    id: Int!
+    username: String!
+    email: String
+    name: String
+    is_active: Boolean
+    weight: Float
+}
+
+type Language{
+    name: String!
+    number: Int
+}
+
+type Country{
+    code: String!
+    capital: String
+    name: String
+    population: Int
+    currency: String
+    UTH: Time
+    location: Location
+    language: Language
+}
+
+type Continent{
+    name: String!
+    countries: [Country]
+}
+
+type Query{
+    allUsers: [User]
+    allContinents: [Continent]
+    getUser(username: String!): User
+    getCountryByCode(code: String!): Country
+    getLanguagesByNumberOfSpeakers(number: Int): [Language]
+    numberOfContinents: Int
+}
+
+type Mutation{
+    createLanguage(name: String!, number: Int): Language
+    deleteContinentById(id: ID!): Continent
+}
