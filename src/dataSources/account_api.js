@@ -12,3 +12,5 @@ class AccountAPI extends RESTDataSource {
         return await this.get(`/accounts/${username}`);
     }
 }
+
+module.exports = AccountAPI;
