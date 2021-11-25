@@ -1,9 +1,9 @@
 const accountResolver = {
     Query: {
-        accountByUsername: async (_, {username}, {dataSource}) => {
-            return await dataSource.accountByUsername(username);
+        accountByUsername: async (_, {username}, {dataSources}) => {
+            return await dataSources.accountAPI.accountByUsername(username);
         }
     }
 }
 
-module.exports = accountResolver;
+module.exports = accountResolver
