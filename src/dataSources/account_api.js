@@ -11,6 +11,10 @@ class AccountAPI extends RESTDataSource {
     async accountByUsername(username){
         return await this.get(`/accounts/${username}`);
     }
+
+    async createAccountRequest(account){
+        return await this.post('/accounts'. account);
+    }
 }
 
 module.exports = AccountAPI;
