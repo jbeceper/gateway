@@ -5,3 +5,5 @@ const accountResolver = {
         }
     }
 }
+
+module.exports = accountResolver;
