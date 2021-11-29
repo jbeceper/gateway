@@ -8,7 +8,7 @@ const authTypeDefs = gql`
 
     input SignUpInput {
         username: String!
-        password: String!
+        password1: String!
         password2: String!
         balance: Int!
     }

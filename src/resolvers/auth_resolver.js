@@ -3,7 +3,7 @@ const usersResolvers = {
         logIn: async (_, { credentials }, { dataSources }) => {
             return await dataSources.authAPI.authRequest(credentials);
         },
-        signUp: async (_,{signupData},{dataSources}) => {
+        signUp: async (_, { signupData }, { dataSources }) => {
             const accountData = {
                 username: signupData.username,
                 balance: signupData.balance,
@@ -15,7 +15,7 @@ const usersResolvers = {
                 password1: signupData.password1,
                 password2: signupData.password2
             }
-            return await dataSources.authAPI.creteUserRequest(userData);
+           return await dataSources.authAPI.createUserRequest(userData);
         }
     }
 }

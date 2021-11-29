@@ -1,7 +1,11 @@
 const accountResolver = {
     Query: {
         accountByUsername: async (_, {username}, {dataSources}) => {
-            return await dataSources.accountAPI.accountByUsername(username);
+            if(username == usernameToken){
+                return await dataSources.accountAPI.accountByUsername(username);
+            }else{
+                return null
+            }
         }
     }
 }
